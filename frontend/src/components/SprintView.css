@@ -1,0 +1,308 @@
+.sprint-view {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sprint-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 18px 24px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+
+.sprint-selector-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.sprint-selector-group label {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+}
+
+.sprint-dropdown {
+  padding: 8px 16px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+  border: 1.5px solid var(--color-primary-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.sprint-dropdown:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(0, 120, 212, 0.15);
+}
+
+.sprint-dates {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+}
+
+.active-sprint-badge {
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary-border);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.sprint-empty {
+  text-align: center;
+  padding: 80px 24px;
+  background: var(--color-surface);
+  border: 1.5px dashed var(--color-border);
+  border-radius: var(--radius-modal);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  box-shadow: var(--shadow-card);
+}
+
+/* Story Kart Alanı */
+.sprint-stories-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.story-section-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+
+.story-header {
+  padding: 18px 24px;
+  background: #FAFBFD;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.story-header:hover {
+  background-color: #F1F5F9;
+}
+
+.story-header-main {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.story-id {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-text-subtle);
+}
+
+.story-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  margin: 0;
+}
+
+/* Durum Hızlı Butonları (Pill Buttons) */
+.status-quick-pills {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.pill-interactive {
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.pill-interactive:hover {
+  transform: translateY(-1px);
+}
+
+.pill-interactive.is-inactive {
+  opacity: 0.35;
+  filter: grayscale(0.5);
+  background-color: transparent !important;
+}
+
+.pill-interactive.is-inactive:hover {
+  opacity: 0.85;
+  filter: none;
+}
+
+.pill-interactive.is-active {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  transform: scale(1.05);
+}
+
+/* Task Kartları Grid */
+.story-tasks-grid {
+  padding: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  background: #FCFDFE;
+}
+
+.no-tasks-hint {
+  grid-column: 1 / -1;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border: 1.5px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.task-card {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: var(--shadow-subtle);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.task-card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.task-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.task-id {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-text-subtle);
+}
+
+.task-title {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.task-desc {
+  font-size: 0.85rem;
+  color: var(--color-text-body);
+  margin: 0;
+  line-height: 1.45;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.task-criteria-box {
+  background: #EFF6FC;
+  border-left: 3px solid var(--color-primary);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  color: #004578;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.4;
+}
+
+.criteria-check-icon {
+  color: var(--color-primary);
+  margin-top: 1px;
+}
+
+.task-status-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 10px;
+  border-top: 1px solid #F1F5F9;
+  margin-top: auto;
+}
+
+.status-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-text-subtle);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.task-pill-group {
+  display: flex;
+  gap: 4px;
+}
+
+.task-status-btn {
+  flex: 1;
+  padding: 4px 2px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  border-radius: var(--radius-pill);
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.12s ease;
+  user-select: none;
+}
+
+.task-status-btn:not(.selected) {
+  opacity: 0.4;
+  background-color: transparent !important;
+  border-color: #E2E8F0 !important;
+  color: #94A3B8 !important;
+}
+
+.task-status-btn:hover:not(.selected) {
+  opacity: 0.85;
+}
+
+.task-status-btn.selected {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  transform: scale(1.04);
+}

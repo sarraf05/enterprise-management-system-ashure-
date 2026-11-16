@@ -1,0 +1,27 @@
+.modal-workitem {
+  max-width: 580px;
+}
+
+.modal-workitem .dependency-field {
+  background: #FFF4CE;
+  border: 1px solid #F8D22A;
+  border-radius: 6px;
+  padding: 12px;
+}
+
+.modal-workitem .dependency-field label {
+  color: #7A5300;
+  font-weight: 600;
+}
+
+.modal-workitem .criteria-field {
+  background: #EFF6FC;
+  border: 1px solid #C7E0F4;
+  border-radius: 6px;
+  padding: 12px;
+}
+
+.modal-workitem .criteria-field label {
+  color: #004578;
+  font-weight: 600;
+}
